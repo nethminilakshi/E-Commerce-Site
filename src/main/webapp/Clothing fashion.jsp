@@ -188,7 +188,7 @@
                 <!-- Product 1 -->
                 <div class="col-md-3">
                     <div class="product-card p-2">
-                        <img src="/api/placeholder/200/200" alt="Scorpion 3D T-Shirt" class="product-image mb-2">
+                        <img src="Assets/images/shirt1.webp" alt="Scorpion 3D T-Shirt" class="product-image mb-2">
                         <div class="product-badge">Buy More Save More</div>
                         <h3 class="product-title">Man Tees Cool Scorpion 3D Printed Oversized T Shirt</h3>
                         <div class="product-price">Rs. 818</div>
@@ -212,7 +212,7 @@
                 <!-- Product 2 -->
                 <div class="col-md-3">
                     <div class="product-card p-2">
-                        <img src="/api/placeholder/200/200" alt="Cat Print T-Shirt" class="product-image mb-2">
+                        <img src="Assets/images/shirt2.webp" alt="Cat Print T-Shirt" class="product-image mb-2">
                         <div class="product-badge">Buy More Save More</div>
                         <h3 class="product-title">I Just Baked You Some Cakes Mother Cat Print T Shirt</h3>
                         <div class="product-price">Rs. 1,260</div>
@@ -235,7 +235,7 @@
                 <!-- Product 3 -->
                 <div class="col-md-3">
                     <div class="product-card p-2">
-                        <img src="/api/placeholder/200/200" alt="Frog And Toad T-Shirt" class="product-image mb-2">
+                        <img src="Assets/images/shirt3.webp" alt="Frog And Toad T-Shirt" class="product-image mb-2">
                         <div class="product-badge">Buy More Save More</div>
                         <h3 class="product-title">Cottagecore Aesthetic Frog And Toad Men Cotton Tops</h3>
                         <div class="product-price">Rs. 1,382</div>
@@ -259,8 +259,8 @@
                 <!-- Product 4 -->
                 <div class="col-md-3">
                     <div class="product-card p-2">
-                        <img src="/api/placeholder/200/200" alt="Camo T-shirt" class="product-image mb-2">
-                        <h3 class="product-title">RMS Men's Cotton Cama T-shirt - Green -Black</h3>
+                        <img src="Assets/images/S5f458dbeb95746b08e25d080a60d1eb9v.jpg_200x200q90.jpg_.webp" alt="Camo T-shirt" class="product-image mb-2">
+                        <h3 class="product-title">Yfashion Men Cotton T-shirt Fashion Landscape Painting</h3>
                         <div class="product-price">Rs. 1,890</div>
                         <div class="d-flex justify-content-between align-items-center mt-2">
                             <div class="product-rating">
@@ -279,7 +279,102 @@
                 </div>
             </div>
 
+            <div class="row g-3">
+                <!-- Product 5 -->
+                <div class="col-md-3">
+                    <div class="product-card p-2">
+                        <img src="Assets/images/trouser1.webp" alt="Scorpion 3D T-Shirt" class="product-image mb-2">
+                        <div class="product-badge">Buy More Save More</div>
+                        <h3 class="product-title">
+                            Classic Streetwear Casual Men Ribbons Harem Jogging</h3>
+                        <div class="product-price">Rs. 2,241
+                         </div>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                (2)
+                            </div>
+                            <div class="product-sales">15 sold</div>
+                        </div>
+                        <div class="mt-2">
+                            <span class="location-badge">Overseas</span>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Product 2 -->
+                <div class="col-md-3">
+                    <div class="product-card p-2">
+                        <img src="Assets/images/shirt2.webp" alt="Cat Print T-Shirt" class="product-image mb-2">
+                        <div class="product-badge">Buy More Save More</div>
+                        <h3 class="product-title">I Just Baked You Some Cakes Mother Cat Print T Shirt</h3>
+                        <div class="product-price">Rs. 1,260</div>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                (1)
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <span class="location-badge">Overseas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-md-3">
+                    <div class="product-card p-2">
+                        <img src="Assets/images/shirt3.webp" alt="Frog And Toad T-Shirt" class="product-image mb-2">
+                        <div class="product-badge">Buy More Save More</div>
+                        <h3 class="product-title">Cottagecore Aesthetic Frog And Toad Men Cotton Tops</h3>
+                        <div class="product-price">Rs. 1,382</div>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                (11)
+                            </div>
+                            <div class="product-sales">79 sold</div>
+                        </div>
+                        <div class="mt-2">
+                            <span class="location-badge">Overseas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-md-3">
+                    <div class="product-card p-2">
+                        <img src="Assets/images/S5f458dbeb95746b08e25d080a60d1eb9v.jpg_200x200q90.jpg_.webp" alt="Camo T-shirt" class="product-image mb-2">
+                        <h3 class="product-title">Yfashion Men Cotton T-shirt Fashion Landscape Painting</h3>
+                        <div class="product-price">Rs. 1,890</div>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                (12)
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <span class="location-badge">Western</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
