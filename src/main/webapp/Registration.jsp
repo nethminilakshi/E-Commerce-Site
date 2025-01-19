@@ -1,0 +1,95 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Popup</title>
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+    />
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f9fa; /* Light gray Bootstrap background */
+        }
+        .popup-modal {
+            background-color: #f7e8ff; /* Light purple background for the popup */
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            position: relative;
+            height: auto; /* Adjusted for content size */
+        }
+        .popup-modal .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 18px;
+            color: #000;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="popup-modal">
+    <span class="close-btn" onclick="window.location.href='login.jsp'">&times;</span>
+    <h4 class="text-center mb-3 fw-bold">Create an Account</h4>
+
+    <form method="post" action="register" class="register-form" id="register-form">
+        <!-- Name Input -->
+        <div class="mb-2 form-group">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" />
+        </div>
+
+        <!-- Email Input -->
+        <div class="mb-2 form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" />
+        </div>
+
+        <!-- Password Input -->
+        <div class="mb-2 form-group">
+            <label for="pass" class="form-label">Password</label>
+            <input type="password" class="form-control" name="pass" id="pass" placeholder="Password" />
+        </div>
+
+        <!-- Repeat Password Input -->
+        <div class="mb-2 form-group">
+            <label for="rePass" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" name="rePass" id="rePass" placeholder="Repeat your password" />
+        </div>
+
+        <div class="mb-2 form-group">
+            <label for="contact">Contact Number</label>
+            <input type="text" name="contact" id="contact"
+                   placeholder="Contact no" />
+        </div>
+        <!-- Terms Checkbox -->
+        <div class="form-check mb-3 form-group">
+            <input type="checkbox" class="form-check-input" id="agree-term" name="agree-term" />
+            <label class="form-check-label" for="agree-term">I agree to the <a href="#" class="text-primary">Terms of Service</a></label>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group form-button">
+            <button type="submit" name="signup" id="signup"
+                  value="Register" class="form-submit btn btn-primary w-100">Sign Up</button>
+        </div>
+
+        <!-- Login Link -->
+        <div class="text-center mt-3">
+            <a href="login.jsp" class="text-decoration-none">I am already a member</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>
