@@ -6,10 +6,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
-    background-image: url("../images/login.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    backdrop-filter: blur(0.2rem);
+    background-color: #f0f0f0;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -94,7 +91,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    color: #999;
+    color: #8a8a8a;
     font-size: 23px;
     transition: all 0.2s ease;
 }
@@ -144,13 +141,15 @@ body {
     font-weight: 500;
     letter-spacing: 1px;
     border-radius: 6px;
-    background-color: #4070f4;
+    background: linear-gradient(135deg, #969eb2, #1f3c8d); /* Gradient added */
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
 .button input:hover {
-    background-color: #265df2;
+    background: linear-gradient(135deg, #7f7f88, #040b13); /* Darker gradient on hover */
 }
+
 .form .login-signup {
     margin-top: 30px;
     text-align: center;

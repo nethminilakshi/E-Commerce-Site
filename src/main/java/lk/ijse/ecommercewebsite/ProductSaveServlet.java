@@ -1,25 +1,23 @@
 package lk.ijse.ecommercewebsite;
 
-import jakarta.servlet.RequestDispatcher;
+import jakarta.annotation.Resource;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+import javax.sql.DataSource;
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 
-@WebServlet(name = "ProductServlet", value = "/product")
-public class ProductServlet extends HttpServlet {
+@WebServlet(name = "ProductSaveServlet", value = "/product")
+public class ProductSaveServlet extends HttpServlet {
 
-    private String message;
-    String DB_URL = "jdbc:mysql://localhost:3306/ecommerce";
-    String DB_USER = "root";
-    String DB_PASSWORD = "Ijse@123";
+    @Resource(name = "java:comp/env/jdbc/pool")
+    private DataSource dataSource;
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -30,10 +28,9 @@ public class ProductServlet extends HttpServlet {
         String quantity = req.getParameter("quantity");
 
 
-
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+            Connection connection = dataSource.getConnection();
             String sql = "INSERT INTO products (productID, productName, price, category, quantity) VALUES (?, ?, ?, ?, ?)";
             PreparedStatement pst = connection.prepareStatement(sql);
             pst.setString(1, id);
@@ -44,10 +41,12 @@ public class ProductServlet extends HttpServlet {
 
             int i = pst.executeUpdate();
             if (i>0){
-                resp.sendRedirect("product-save.jsp?message=Product Save Successfully");
+                String alert = "Product added Successfully";
+                resp.sendRedirect("product-save.jsp?message=" + URLEncoder.encode(alert, "UTF-8"));
             }
             else{
-                resp.sendRedirect("product-save.jsp?error=Failed to save product");
+                String error = "Fail to update product";
+                resp.sendRedirect("product-save.jsp?error=" + URLEncoder.encode(error, "UTF-8"));
             }
         } catch (ClassNotFoundException | SQLException e) {
 

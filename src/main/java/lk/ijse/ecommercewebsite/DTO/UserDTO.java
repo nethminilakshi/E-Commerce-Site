@@ -1,4 +1,4 @@
-package lk.ijse.ecommercewebsite;
+package lk.ijse.ecommercewebsite.DTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

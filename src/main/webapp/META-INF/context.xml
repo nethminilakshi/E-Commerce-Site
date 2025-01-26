@@ -1,3 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context path="/">
+    <Resource
+            name="jdbc/pool"
+            auth="Container"
+            type="javax.sql.DataSource"
+            driverClassName="com.mysql.cj.jdbc.Driver"
+            url="jdbc:mysql://localhost:3306/ecommerce"
+            username="root"
+            password="Ijse@123"
+            maxTotal="20"
+            maxIdle="10"
+            minIdle="5"
+            initialSize="5"
+            maxWaitMillis="10000"
+    />
 </Context>

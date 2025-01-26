@@ -1,4 +1,4 @@
-package lk.ijse.ecommeceweb.Serverlete;
+package lk.ijse.ecommercewebsite;
 
 import jakarta.annotation.Resource;
 import jakarta.servlet.ServletContext;
@@ -7,7 +7,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lk.ijse.ecommeceweb.DTO.UserDto;
+import lk.ijse.ecommercewebsite.DTO.UserDTO;
 
 import javax.sql.DataSource;
 import java.io.IOException;
@@ -16,8 +16,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 @WebServlet("/user" )
-public class UserServerlete extends HttpServlet {
+public class LoginServlet extends HttpServlet {
     @Resource(name = "java:comp/env/jdbc/pool")
     private DataSource dataSource;
     @Override
@@ -88,10 +89,10 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
 
 
             if (dbEmail.equals(email) && dbPassword.equals(password)) {
-                UserDto user = new UserDto(dbUserId,dbName,dbEmail,dbPassword,dbRole,Boolean.parseBoolean(dbActive));
+                UserDTO user = new UserDTO(dbUserId,dbName,dbEmail,dbPassword,dbRole,Boolean.parseBoolean(dbActive));
                 if (user.getRole().equals("admin")) {
                     String alertMessage = "Login successfully!";
-                    response.sendRedirect("adminDashbord.jsp?message=" + URLEncoder.encode(alertMessage, "UTF-8"));
+                    response.sendRedirect("Dashboard.jsp?message=" + URLEncoder.encode(alertMessage, "UTF-8"));
                 }else {
                     String alertMessage = "Login successfully!";
                     response.sendRedirect("index.jsp?message=" + URLEncoder.encode(alertMessage, "UTF-8"));

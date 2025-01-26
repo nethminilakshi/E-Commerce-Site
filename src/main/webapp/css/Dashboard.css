@@ -7,24 +7,17 @@
 	font-family: 'Ubuntu', sans-serif;
 }
 
-body {
-	min-height: 100vh;
-	overflow-x: hidden;
-	display: flex;
-
-}
-
-:root 
+:root
 {
-	
+
 	--Lightbrown: #9c6644;
-	--Darkbrown: #7f5539;
+	--Darkbrown: #c79972;
 	--brown: #b08968;
 	--brown1: #fff1e4;
-	--brown2: #f8e7d6;
-    --brown3:#ede0d4;
-    --white:#fff;
-	
+	--brown2: #606290;
+	--brown3:#ede0d4;
+	--white: #fcfcfc;
+
 	/* --Lightbrown: #9c6644;
 	--Darkbrown: #7f5539;
 	--brown: #b08968;
@@ -34,362 +27,92 @@ body {
     --white:#fff; */
 }
 
+body
+{
+	min-height: 100vh;
+	overflow-x: hidden;
+}
+
 /* ----------------- Navigation Bar ----------------- */
 .logo
 {
-    height: 70px;
-    width: 70px;
-    margin-top: 5px;
-}
+	height: 70px;
+	width: 70px;
+	margin-top: 5px;
+}.navigation {
+	 position: fixed;
+	 width: 300px;
+	 height: 100%;
+	 background: linear-gradient(135deg, rgba(36, 88, 89, 0.67), #f1faee) !important; /* Light gradient */
+	 border-left: 10px solid #457b9d !important; /* Soft blue for contrast */
+	 transition: 0.5s;
+	 overflow: hidden;
+ }
 
-
-
-
-.navigation ul li a {
-	display: flex;
-	align-items: center;
-	text-decoration: none;
-	color: #adb5bd;
-	padding: 10px 15px;
-	border-radius: 8px;
-	transition: all 0.3s ease-in-out;
-}
-
-.navigation ul li a:hover,
-.navigation ul li.hovered a {
-	background-color: #495057;
-	color: #fff;
-}
-
-.navigation ul li a .icon {
-	margin-right: 10px;
-	font-size: 1.5rem;
-}
-
-.navigation ul li a .icon img.logo {
-	width: 30px;
-	height: 30px;
-}
-
-.navigation ul li a .title {
-	font-size: 1rem;
-	font-weight: 500;
-}
-
-.navigation ul li:first-child a .title {
-	font-size: 1.5rem;
-	font-weight: bold;
-	margin-top: 15px;
-	color: #fff;
-}
-
-.navigation
-{
-	position: fixed;
-	width: 300px;
-	height: 100%;
-	background-color: #343a40; /* Dark background */
-	color: #fff;
-	border-left: 10px solid #343a40;
-	transition: 0.5s;
-	overflow: hidden;}
-
-.navigation.active
-{
-	width: 80px;
-}
-
-.navigation ul
-{
+.navigation ul {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
+	padding: 20px 0; /* Added padding for spacing between elements */
 }
 
-.navigation ul li
-{
+.navigation ul li {
 	position: relative;
 	width: 100%;
 	list-style: none;
+	margin-bottom: 20px; /* Space between list items */
 	border-top-left-radius: 30px;
 	border-bottom-left-radius: 30px;
 }
 
 .navigation ul li:hover,
-.navigation ul li.hovered
-{
-	background: var(--white);
+.navigation ul li.hovered {
+	background: linear-gradient(135deg, #f1faee, rgb(53, 53, 54)); /* Hover gradient */
 }
 
-.navigation ul li:nth-child(1)
-{
-	margin-bottom: 40px;
-	pointer-events: none;
-}
-
-.navigation ul li a
-{
+.navigation ul li a {
 	position: relative;
-
+	display: flex; /* Flex for better alignment */
+	align-items: center; /* Center content vertically */
 	width: 100%;
-	display: flex;
+	height: 70px; /* Increased height for better balance */
 	text-decoration: none;
-
-
-	align-items: center;
-	color: #adb5bd;
-	padding: 10px 15px;
-	border-radius: 8px;
-	transition: all 0.3s ease-in-out;
-
+	color: #1d3557; /* Dark blue for text contrast */
+	font-size: 18px; /* Larger font size for readability */
+	font-weight: bold; /* Bold text */
+	padding-left: 20px; /* Padding inside the link */
 }
 
-.navigation ul li:hover a ,
-.navigation ul li.hovered a
-{
-	color: var(--Darkbrown);
-    font-size:larger;
-    font-weight: bolder;
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+	color: #ffffff; /* White text for hover state */
+	font-size: 20px; /* Slightly larger on hover */
 }
 
-.navigation ul li a .icon
-{
+/* Icon styling */
+.navigation ul li a .icon {
 	position: relative;
 	display: block;
-	min-width: 60px;
-	height: 60px;
-	line-height: 70px;
-	text-align: center;
+	min-width: 70px;
 }
-
-.navigation ul li a .icon ion-icon
-{
-	font-size: 1.75em;
-}
-
-.navigation ul li a .title
-{
-	position: relative;
-	display: block;
-	padding: 0 10px;
-	height: 60px;
-	line-height: 60px;
-	text-align: start;
-	white-space: nowrap;
-}
-
-/* curve outside */
-
-.navigation ul li:hover a::before,
-.navigation ul li.hovered a::before
-{
-	content: '';
-	position: absolute;
-	right: 0;
-	top: -50px;
-	width: 50px;
-	height: 50px;
-	background: transparent;
-	border-radius: 50%;
-	box-shadow: 35px 35px 0 10px var(--white);
-	pointer-events: none;
-}
-
-.navigation ul li:hover a::after,
-.navigation ul li.hovered a::after
-{
-	content: '';
-	position: absolute;
-	right: 0;
-	bottom: -50px;
-	width: 50px;
-	height: 50px;
-	background: transparent;
-	border-radius: 50%;
-	box-shadow: 35px -35px 0 10px var(--white);
-	pointer-events: none;
-}
-
-
-/* main */ 
+/* main */
 .main
 {
-	margin-left: 300px;
+	position: absolute;
 	width: calc(100% - 300px);
+	left: 300px;
 	min-height: 100vh;
 	background: var(--white);
 	transition: 0.5s;
-	padding: 20px;
+	margin-left: 20px;
+	padding: 0;
 }
 
 .main.active
 {
-	margin-left: 80px;
 	width: calc(100% - 80px);
-}
-
-/* ----------------- Dashboard Form ----------------- */
-.topbar 
-{
-	width: 100%;
-	height: 60px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 10px;
-}
-
-.toggle 
-{
-	position: relative;
-	width: 60px;
-	height: 60px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 2.5em;
-	cursor: pointer;
-    color: var(--Darkbrown);
-}
-
-.search 
-{
-	position: relative;
-	width: 400px;
-	margin: 0 10px;
-}
-
-.search label 
-{
-	position: relative;
-	width: 100%;
-}
-
-.search label input 
-{
-	width: 100%;
-	height: 40px;
-	border-radius: 40px;
-	border-color: var(--brown1);
-	padding: 5px 20px;
-	padding-left: 35px;
-	font-size: 18px;
-	outline: none;
-	border: 1px solid var(--Darkbrown);
-    color: var(--Darkbrown);
-}
-
-.search label ion-icon 
-{
-	position: absolute;
-	top: 0;
-	left: 10px;
-	font-size: 1.2em;
-    color: var(--Darkbrown);
-}
-
-.user 
-{
-	position: relative;
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	overflow: hidden;
-	cursor: pointer;
-}
-
-.user img 
-{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+	left: 80px;
 }
 
 
-.cardBox 
-{
-	position: relative;
-	width: 100%;
-	padding: 20px;
-	display: grid;
-	grid-template-columns: repeat(4,1fr);
-	grid-gap: 30px;
-}
-
-.cardBox .card 
-{
-	position: relative;
-	background: var(--brown2);
-	padding: 30px;
-	border-radius: 20px;
-	/* border: 1px solid var(--Lightbrown); */
-	display: flex;
-	justify-content: space-between;
-	cursor: pointer;
-	/* box-shadow: 0 5px 15px var(--Lightbrown); */
-	transition: transform 0.3s ease;
-}
-
-.cardBox .card .numbers 
-{
-	position: relative;
-	font-weight: 400;
-	font-size: 2.5em;
-	color: var(--Darkbrown);
-}
-
-.cardBox .card .cardName 
-{
-	color: var(--Lightbrown);
-	font-size: 1.1em;
-	margin-top: 5px;
-}
-
-.cardBox .card .iconBx 
-{
-	font-size: 3.5em;
-	color: var(--Darkbrown);
-}
-
-.cardBox .card:hover 
-{
-	background: #be8057;
-	transform: translateY(-10px);
-}
-
-.cardBox .card:hover .numbers,
-.cardBox .card:hover .cardName,
-.cardBox .card:hover .iconBx 
-{
-	color: var(--white);
-}
-
-.charts {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 15px;
-	margin-top: 10px;
-	padding: 15px;
-  }
-  
-  .charts-card {
-	background-color: var(--brown2);
-	margin-bottom: 20px;
-	padding: 25px;
-
-	box-sizing: border-box;
-	-webkit-column-break-inside: avoid;
-	border-radius: 10px;
-	box-shadow: 0 6px 7px -4px var(--brown3);
-  }
-  
-  .chart-title {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: var(--Darkbrown);
-  }

@@ -3701,7 +3701,7 @@ iframe {border: none;}
 /*---------------------------------------------*/
 .hidden-scroll {
 	-ms-overflow-style: none;
-	overflow: -moz-scrollbars-none;
+	overflow: hidden;
 }
 
 .hidden-scroll::-webkit-scrollbar {

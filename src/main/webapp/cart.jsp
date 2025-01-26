@@ -25,7 +25,7 @@
 <body class="animsition">
 
 <!-- Header -->
-<header class="header-v4">
+<header>
     <!-- Header desktop -->
     <div class="container-menu-desktop">
         <!-- Topbar -->
@@ -40,22 +40,16 @@
                         Help & FAQs
                     </a>
 
-                    <a href="#" class="flex-c-m trans-04 p-lr-25">
-                        My Account
+                    <a href="login.jsp" class="flex-c-m trans-04 p-lr-25">
+                        Login
                     </a>
 
-                    <a href="#" class="flex-c-m trans-04 p-lr-25">
-                        EN
-                    </a>
 
-                    <a href="#" class="flex-c-m trans-04 p-lr-25">
-                        USD
-                    </a>
                 </div>
             </div>
         </div>
 
-        <div class="wrap-menu-desktop how-shadow1">
+        <div class="wrap-menu-desktop">
             <nav class="limiter-menu-desktop container">
 
                 <!-- Logo desktop -->
@@ -66,21 +60,21 @@
                 <!-- Menu desktop -->
                 <div class="menu-desktop">
                     <ul class="main-menu">
-                        <li>
-                            <a href="index.html">Home</a>
+                        <li class="active-menu">
+                            <a href="index.jsp">Home</a>
                             <ul class="sub-menu">
-                                <li><a href="index.html">Homepage 1</a></li>
-                                <li><a href="home-02.html">Homepage 2</a></li>
-                                <li><a href="home-03.html">Homepage 3</a></li>
+                                <li><a href="index.jsp">Homepage 1</a></li>
+                                <li><a href="home-02.jsp">Homepage 2</a></li>
+                                <li><a href="home-03.jsp">Homepage 3</a></li>
                             </ul>
                         </li>
 
                         <li>
-                            <a href="product.html">Shop</a>
+                            <a href="product.jsp">Shop</a>
                         </li>
 
                         <li class="label1" data-label1="hot">
-                            <a href="shoping-cart.html">Features</a>
+                            <a href="cart.jsp">Features</a>
                         </li>
 
                         <li>
@@ -92,7 +86,7 @@
                         </li>
 
                         <li>
-                            <a href="contact.html">Contact</a>
+                            <a href="contact.jsp">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -107,7 +101,7 @@
                         <i class="zmdi zmdi-shopping-cart"></i>
                     </div>
 
-                    <a href="#" class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0">
+                    <a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0">
                         <i class="zmdi zmdi-favorite-outline"></i>
                     </a>
                 </div>
@@ -119,7 +113,7 @@
     <div class="wrap-header-mobile">
         <!-- Logo moblie -->
         <div class="logo-mobile">
-            <a href="index.html"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
+            <a href="index.jsp"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
         </div>
 
         <!-- Icon header -->
@@ -157,17 +151,11 @@
 
             <li>
                 <div class="right-top-bar flex-w h-full">
-                    <a href="#" class="flex-c-m p-lr-10 trans-04">
-                        Help & FAQs
-                    </a>
 
                     <a href="#" class="flex-c-m p-lr-10 trans-04">
                         My Account
                     </a>
 
-                    <a href="#" class="flex-c-m p-lr-10 trans-04">
-                        EN
-                    </a>
 
                     <a href="#" class="flex-c-m p-lr-10 trans-04">
                         USD
@@ -178,23 +166,18 @@
 
         <ul class="main-menu-m">
             <li>
-                <a href="index.html">Home</a>
+                <a href="index.jsp">Home</a>
                 <ul class="sub-menu-m">
-                    <li><a href="index.html">Homepage 1</a></li>
-                    <li><a href="home-02.html">Homepage 2</a></li>
-                    <li><a href="home-03.html">Homepage 3</a></li>
+                    <li><a href="index.jsp">Hojspmepage 1</a></li>
+                    <li><a href="home-02.jsp">Homepage 2</a></li>
+                    <li><a href="home-03.jsp">Homepage 3</a></li>
                 </ul>
                 <span class="arrow-main-menu-m">
 						<i class="fa fa-angle-right" aria-hidden="true"></i>
 					</span>
             </li>
 
-            <li>
-                <a href="product.html">Shop</a>
-            </li>
-
-            <li>
-                <a href="shoping-cart.html" class="label1 rs1" data-label1="hot">Features</a>
+            <li><a href="product.jsp">Shop</a>
             </li>
 
             <li>
@@ -206,7 +189,7 @@
             </li>
 
             <li>
-                <a href="contact.html">Contact</a>
+                <a href="contact.jsp">Contact</a>
             </li>
         </ul>
     </div>
@@ -520,12 +503,6 @@
 
                     <li class="p-b-10">
                         <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Shoes
-                        </a>
-                    </li>
-
-                    <li class="p-b-10">
-                        <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
                             Watches
                         </a>
                     </li>
@@ -608,36 +585,6 @@
             </div>
         </div>
 
-        <div class="p-t-40">
-            <div class="flex-c-m flex-w p-b-18">
-                <a href="#" class="m-all-1">
-                    <img src="images/icons/icon-pay-01.png" alt="ICON-PAY">
-                </a>
-
-                <a href="#" class="m-all-1">
-                    <img src="images/icons/icon-pay-02.png" alt="ICON-PAY">
-                </a>
-
-                <a href="#" class="m-all-1">
-                    <img src="images/icons/icon-pay-03.png" alt="ICON-PAY">
-                </a>
-
-                <a href="#" class="m-all-1">
-                    <img src="images/icons/icon-pay-04.png" alt="ICON-PAY">
-                </a>
-
-                <a href="#" class="m-all-1">
-                    <img src="images/icons/icon-pay-05.png" alt="ICON-PAY">
-                </a>
-            </div>
-
-            <p class="stext-107 cl6 txt-center">
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> &amp; distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
-            </p>
-        </div>
     </div>
 </footer>
 

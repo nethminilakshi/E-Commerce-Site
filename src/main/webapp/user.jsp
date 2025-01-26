@@ -1,4 +1,4 @@
-<%@ page import="lk.ijse.ecommercewebsite.UserDTO" %>
+<%@ page import="lk.ijse.ecommercewebsite.DTO.UserDTO" %>
 <%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: Nethu
@@ -16,54 +16,40 @@
     <link rel="stylesheet" href="css/Dashboard.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    <style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
         body {
             background-color: #f4f6f9;
             font-family: 'Arial', sans-serif;
         }
+
+
         .product-list-container {
+            margin-top: 20px;
+            padding: 20px;
             background-color: white;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            padding: 30px;
-            margin-top: 50px;
-        }
-        .back-button {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            transition: transform 0.2s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .delete-button a {
-            color: white;
-            text-decoration: none;
-        }
-        .back-button:hover {
-            transform: scale(1.05);
-        }
-
-        #productTable {
-            width: 100%;
-            margin-top: 20px;
-        }
-        #productTable thead {
-            background-color: rgba(183, 103, 67, 0.59);
-        }
-        #productTable th, #productTable td {
-            vertical-align: middle;
+        .btn-add-user-button {
+            margin-left: 55%;
+            margin-top: 5px;
+            width: 130px;
             padding: 12px;
-        }
-        #productTable tr:nth-child(even) {
-            background-color: #ffffff;
-        }
-        #productTable tr:hover {
-            background-color: #ffffff;
-            transition: background-color 0.3s ease;
+            font-size: 15px;
+            font-weight: bolder;
+            border-radius: 20px;
+            color: white;
+            background: #b08968;
+            border: 1px solid #b08968;
         }
 
-        .user-table{
+        .table th{
+            background-color: #f8e7d6;
+        }
+
+        .table{
             width: 95%;
             border-collapse: separate;
             border-spacing: 0;
@@ -71,19 +57,7 @@
             margin-top: 60px;
             color: #7f5539;
         }
-        .delete-user-button {
-            background-color: #606290;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 12px;
-        }
-        .delete-user-button a{
-            text-decoration: none;
-            color: white;
-            font-size: 1rem;
-        }
+
     </style>
 </head>
 <body>
@@ -91,7 +65,7 @@
     <ul>
         <li>
             <a href="#">
-                <span class="icon"><img src="images/logo-01.png" class="logo"></span>
+                <span class="icon"><img src="Assets/images/dashboard_icon-removebg-preview.png" class="logo"></span>
                 <span class="title" style="font-size: 1.5em;font-weight: 500; margin-top: 15px;">COZA Store</span>
             </a>
         </li>
@@ -102,7 +76,7 @@
             </a>
         </li>
         <li>
-            <a href="user" id="CustomerForm-button">
+            <a href="user.jsp" id="CustomerForm-button">
                 <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
                 <span class="title" >Users</span>
             </a>
@@ -141,8 +115,11 @@
 </div>
 
 <div class="main">
+
 <div class="container product-list-container">
-    <h1 class="mb-4">User List</h1>
+    <h1>User List</h1>
+    <%--    ----------- Add new Admin -----------------%>
+
     <%
         String message = request.getParameter("message");
         if (message != null && !message.isEmpty()) {
@@ -169,16 +146,15 @@
                 if(users!= null && !users.isEmpty()){
             %>
 
-
             <table class="table">
                 <thead>
                 <tr>
                     <th scope="col">Id</th>
-                    <th scope="col">Name</th>
+                    <th scope="col">name</th>
                     <th scope="col">email</th>
                     <th scope="col">role</th>
 
-                    <th scope="col">is_active</th>
+                    <th scope="col">status</th>
 
                     <th scope="col"></th>
                 </tr>
@@ -196,17 +172,17 @@
                     <td><%=user.isActive()%></td>
 
                     <td>
-                        <form id="deactivateUserForm" action="/EcommeceWeb_war_exploded/deactivateUser" method="POST" style="display:none;">
+                        <form id="deactivateUserForm" action="/E_Commerce_website_war_exploded/deactivateUser" method="POST" style="display:none;">
                             <input type="hidden" name="userId" value="<%=user.getUserId()%>"  > <!-- Pass any required data -->
                         </form>
-                        <button class="btn btn-warning btn-sm" onclick="document.getElementById('deactivateUserForm').submit();">
+                        <button class="btn btn-outline-success btn-sm" onclick="document.getElementById('deactivateUserForm').submit();">
                             Deactivate User
                         </button>
-                        <form id="deleteUserForm" action="/EcommeceWeb_war_exploded/deleteUser" method="POST" style="display:none;">
+                        <form id="deleteUserForm" action="/E_Commerce_website_war_exploded/deleteUser" method="POST" style="display:none;">
                             <input type="hidden" name="userId"  value="<%=user.getUserId()%>"> <!-- Pass any required data -->
                         </form>
 
-                        <button  class="btn btn-danger btn-sm" onclick="confirmDeletion();">
+                        <button  class="btn btn-outline-danger btn-sm" onclick="confirmDeletion();">
                             Delete User
                         </button>
                     </td>
@@ -218,14 +194,50 @@
             </table>
 
             <% } else { %>
-            <p>No products found.</p>
             <% } %>
         </div>
+        <div class="d-flex flex-row">
+            <button type="button" class="btn btn btn-info mb-3 me-2 " data-bs-toggle="modal"
+                    data-bs-target="#studentModal">
+                New Admin
+            </button>
 
+            <button type="button"  class="btn btn-secondary mb-3 text-end" onclick="window.location.href='/E_Commerce_website_war_exploded/addAdmin';" >
+                All users
+            </button>
+        </div>
+        <div class="modal fade" id="studentModal" tabindex="-1" aria-labelledby="studentModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="container m-2">
+                        <form action="product" method="post" >
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" name="productName" id="name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" name="email" id="email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" name="price" id="password">
+                            </div>
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label"> Confirm Password</label>
+                                <input type="password" class="form-control" name="confirmPassword" id="confirmPassword">
+                            </div>
+
+                            <button type="submit" class="btn btn-success" onclick="return confirm('Are you sure Do you want to add this Admin?');">Add Admin</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
-    <button id="delete-user" class="delete-user-button"><a href="delete-users">Delete User</a></button>
-    <button class="btn btn-secondary back-button" onclick="window.history.back()">← Back</button>
+
+
 </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

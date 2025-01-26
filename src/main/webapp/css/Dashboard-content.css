@@ -1,0 +1,275 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 60px 0 0;
+
+}
+
+.breadcrumb {
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.breadcrumb a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.product-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background-color: rgba(39, 43, 56, 0.31);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 60vh;
+}
+
+.product-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-info h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.product-info .rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.product-info .rating span {
+    background-color: #f4b400;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.product-info .price {
+    font-size: 20px;
+    color: #4caf50;
+    margin: 10px 0;
+}
+
+.product-info .size-guide {
+    margin-bottom: 10px;
+}
+
+.product-info .size-guide a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.product-info .size-guide a:hover {
+    text-decoration: underline;
+}
+
+.product-info .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-info select,
+.product-info button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.product-info select {
+    background-color: #444;
+    color: #fff;
+}
+
+.product-info button {
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+.product-info button:hover {
+    background-color: #007acc;
+}
+
+.product-info .payment-options {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-info .payment-options img {
+    height: 25px;
+}
+
+.product-info .free-delivery {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #bbb;
+}
+/*---------------------------product cards --------------------------------*/
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin:30px 60px;
+}
+
+.card {
+    background-color: #2a2d38;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 36px;
+    margin: 0 0 10px;
+}
+
+.card p {
+    font-size: 18px;
+    color: #bbb;
+}
+
+.card.products {
+    background-color: #5c5d94;
+}
+
+.card.categories {
+    background-color: #424643;
+}
+
+.card.users {
+    background-color: #5d455c;
+}
+
+.product-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background-color: #2a2d38;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-info h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.product-info .rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.product-info .rating span {
+    background-color: #f4b400;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.product-info .price {
+    font-size: 20px;
+    color: #4caf50;
+    margin: 10px 0;
+}
+
+.product-info .size-guide {
+    margin-bottom: 10px;
+}
+
+.product-info .size-guide a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.product-info .size-guide a:hover {
+    text-decoration: underline;
+}
+
+.product-info .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-info select,
+.product-info button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.product-info select {
+    background-color: #444;
+    color: #fff;
+}
+
+.product-info button {
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+.product-info button:hover {
+    background-color: #007acc;
+}
+
+.product-info .payment-options {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-info .payment-options img {
+    height: 25px;
+}
+
+.product-info .free-delivery {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #bbb;
+}
