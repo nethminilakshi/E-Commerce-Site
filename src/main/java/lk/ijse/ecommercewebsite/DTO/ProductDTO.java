@@ -1,16 +1,16 @@
-package lk.ijse.ecommercewebsite.DTO;
+package lk.ijse.ecommercewebsite;
 
 public class ProductDTO {
     private String productId;
     private String productName;
     private double price;
     private String category;
-    private int quantity;
+    private String quantity;
 
     public ProductDTO() {
     }
 
-    public ProductDTO(String productId, String productName, double price, String category, int quantity) {
+    public ProductDTO(String productId, String productName, double price, String category, String quantity) {
         this.productId = productId;
         this.productName = productName;
         this.price = price;
@@ -50,11 +50,11 @@ public class ProductDTO {
         this.category = category;
     }
 
-    public int getQuantity() {
+    public String getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(String quantity) {
         this.quantity = quantity;
     }
 }
